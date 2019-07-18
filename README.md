@@ -1,6 +1,6 @@
-#Vue
+# Vue
 
-###setting package.json
+### setting package.json
 
     {
       "name": "vue_demo",
@@ -36,17 +36,17 @@
     }
     
 ##
-###Run Vue watch and Django server
+### Run Vue watch and Django server
 `yarn build:vue`  
 `yarn watch:vue`  
 `yarn start:django`
 
 
-#PWA
+# PWA
 ### install
 `pip install django-progressive-web-app`  
 
-###add in settings.py(vue_demo/settings.py)
+### add in settings.py(vue_demo/settings.py)
     
     INSTALLED_APPS = [
     ...
@@ -54,7 +54,7 @@
     'pwa',
     ]
 ##
-###add urls in urls.py
+### add urls in urls.py
     urlpatterns = [
         ...
         path("", views.index),
@@ -64,10 +64,10 @@
     ]
 ##
 ### **create serviceworker**
-####**Setting.py**
+#### **Setting.py**
 
     PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'app/static', 'serviceworker.js')
-####**serviceworker.js**
+#### **serviceworker.js**
     
     var staticCacheName = 'djangopwa-v2';
     self.addEventListener('install', function(event) {
@@ -98,8 +98,8 @@
         );
     });
 ##
-###add manifest.json
-####**create at templates directory**
+### add manifest.json
+#### **create at templates directory**
 
     {
     "name": "Summer Vue Demo",
@@ -134,7 +134,7 @@
     }
 
 ## **Indexed Database**
-####add tag and script in base.html
+#### add tag and script in base.html
     {% load pwa %}
     {% progressive_web_app_meta %}
 
@@ -145,10 +145,10 @@ also add div to display result
     <div id="offlinedata">
     </div>
 
-####**create idb.js at static directory**  
+#### **create idb.js at static directory**  
 copy from [this](https://github.com/kirankumbhar/DjangoPWA/blob/master/posts/static/js/idb.js)  
 
-####**create idbop.js at static directory**
+#### **create idbop.js at static directory**
 
     
 	var dbPromise = idb.open('feeds-db', 5, function(upgradeDb) {
@@ -200,10 +200,10 @@ copy from [this](https://github.com/kirankumbhar/DjangoPWA/blob/master/posts/sta
 		
 
 ##
-###...Setting nginx... 
+### ...Setting nginx... 
 put cert in project directory
 
-####DEMO
+#### DEMO
 1. run nginx
 2. parcel watch  
 
