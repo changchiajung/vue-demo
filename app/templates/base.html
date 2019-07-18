@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load pwa %}
+    {% progressive_web_app_meta %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="./static/src/worldwide-72.png"/>
+    <link rel="stylesheet" href="./static/index.css">
+    <meta name="Description" content="Django and Vue.js Demo PWA">
+    <title>demo</title>
+</head>
+<body>
+<noscript>This website requires JavaScript. To contact us, please send us an email at: <a href="mailto:E24066519@mail.ncku.edu.tw">E24066519@mail.ncku.edu.tw</a></noscript>
+<form>
+    {% csrf_token %}
+</form>
+<div id="content" class="container">
+    <br><br><br>
+    {% block content %}
+
+    {% endblock %}
+</div>
+<div id="offlinedata">
+</div>
+
+<script type="text/javascript" src="./static/idb.js"></script>
+<script type="text/javascript" src="./static/idbop.js"></script>
+</body>
+</html>
