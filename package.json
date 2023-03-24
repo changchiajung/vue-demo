@@ -5,7 +5,7 @@
   "scripts": {
     "build:vue": "parcel build ./index.js --public-url .",
     "start": "concurrently --kill-others 'yarn run start:django' 'yarn run watch:vue'",
-    "start:django": "python manage.py runserver",
+    "start:django": "python3 manage.py runserver",
     "start:vue": "parcel dist/index.html",
     "watch:vue": "parcel watch ./index.js --public-url .",
     "watch:vuehttps":"parcel watch ./index.js --cert localhost.pem --key localhost-key.pem"

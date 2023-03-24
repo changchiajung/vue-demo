@@ -10095,6 +10095,10 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+//
+//
 var _default = {
   name: "App",
   data: function data() {
@@ -10104,20 +10108,24 @@ var _default = {
   }
 };
 exports.default = _default;
-        var $1f1b43 = exports.default || module.exports;
+        var $cb6306 = exports.default || module.exports;
       
-      if (typeof $1f1b43 === 'function') {
-        $1f1b43 = $1f1b43.options;
+      if (typeof $cb6306 === 'function') {
+        $cb6306 = $cb6306.options;
       }
     
         /* template */
-        Object.assign($1f1b43, (function () {
+        Object.assign($cb6306, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { attrs: { id: "display" } }, [
-    _vm._v("\n    " + _vm._s(_vm.value) + "\n")
+  return _c("div", [
+    _c("h3", [_vm._v("With something static value")]),
+    _vm._v(" "),
+    _c("div", { attrs: { id: "display" } }, [
+      _vm._v("\n        " + _vm._s(_vm.value) + "\n    ")
+    ])
   ])
 }
 var staticRenderFns = []
@@ -10127,7 +10135,7 @@ render._withStripped = true
             render: render,
             staticRenderFns: staticRenderFns,
             _compiled: true,
-            _scopeId: "data-v-1f1b43",
+            _scopeId: "data-v-cb6306",
             functional: undefined
           };
         })());
@@ -10140,9 +10148,9 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$1f1b43', $1f1b43);
+            api.createRecord('$cb6306', $cb6306);
           } else {
-            api.reload('$1f1b43', $1f1b43);
+            api.reload('$cb6306', $cb6306);
           }
         }
 
@@ -10198,7 +10206,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59889" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63365" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -10374,4 +10382,4 @@ function hmrAcceptRun(bundle, id) {
   }
 }
 },{}]},{},["node_modules/parcel/src/builtins/hmr-runtime.js","index.js"], null)
-//# sourceMappingURL=/index.js.map
+//# sourceMappingURL=index.js.map
